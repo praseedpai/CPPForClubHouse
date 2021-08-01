@@ -1,0 +1,155 @@
+Fortran - The First High Level Language
+
+John Backus - The Father of Fortran Language (@IBM)
+
+John Von Neuman - Stored Program Computer , Game Theory, Cardninal/Ordinal number defined by 
+him.
+
+John => " Why are you making Computer do, what can be done by a Clerk?!"
+
+John Backus (and his team ) wrote the First Optimization Compiler
+            - Mathematical Computation (Numerical Computing)
+
+CODASYL comittee designed COBOL (Business Computing )
+   - Common Business Oriented Language
+   - COBOL mostly exists in COBOL
+
+The Next Major Programming Language was "PL/1"
+          - Marrying Numerical Computing + Business Computing 
+          - A Camel is a horse designed by a comittee
+          - PL/1 was a "failure"
+
+Darmouth College ( John Kemeny + Thomas Kurtz ) designed "BASIC" 
+         - Beginners All Purpose Symbolic Instruction Code
+         - Quick Basic, Visual Basic , VB.net 
+
+Simula Programming Language in 1967 
+            - Norwegian Programmers ( Christian Nygard , Jan Ole Dahl )
+            - The World's First Object Oriented Programming language
+
+ALGOL was standardized in 1968 ( Peter Naur )
+           - Backus Naur Form (BNF ) - John Backus and Peter Naur Form
+           - Consult Wiki Page on "BNF"
+
+<Expr> := <Term> | <Term> <ADDOP> <Expr>
+<Term>:=  <Factor> | <Factor> <MULOP> <Term>
+<Factor> := <NUMBER> | ( <Expr> ) | (+|-) <Factor>
+
+Consult the Chapter 2 of the Book, "The Art of Compiler Construction"  by Praseed Pai
+=============================================================
+https://github.com/praseedpai/SlangForDotNet/blob/master/CompilerEbook/SLANG_FOR_DOT_NET_STEP7.pdf
+
+
+---------------------------------
+GE , MIT and AT&T embarked on "MULTICS" project
+          - Computing Power for Everyone like Utility (Electricity)
+          - https://en.wikipedia.org/wiki/Multics
+          - Multics Project Failed
+          - GE stopped their Computing Business for sometime
+          - Ken thomposon & Dennis Ritchie were part of the Multics Project
+With "Pun" intented , they embarked on a new Project called "Unix" (UNICS)
+          - Ken Thompson is the inventor of the UNIX operating System
+                     - https://en.wikipedia.org/wiki/Ken_Thompson
+          - They start with "Less is More" (Minimalism ). There is  saying that , they forgot the
+            "More Part" (in the case of the GO programming language!)
+          - The Original Version of the UNIX was written in Assembler
+
+The BCPL language - https://en.wikipedia.org/wiki/BCPL
+                                                                                                                                
+          - BCPL (Martin Richards) => B Language (Ken Thomposon) => C => C++ => C#
+                                                                                                                      |         |
+                                                                                                                      |       Java 
+						Objective C => Swift
+The Unix was rewritten in the C Programming Language
+                - From that day onwards, UNIX and C are referred together
+
+=======================================================
+C# -  ECMA (pronounced "Ekma" )  - JS is standardized by ECMA (ECMAScript)
+          -European Computer Manufacturers Association
+          - Mono Compiler was Open Source from 2001 (Portable.Net/dotGNU )
+                       - Mono C# ( independent implementation on Windows/Linux/MAC)
+                       - https://www.mono-project.com/
+------------------------------------------------------------------------------
+Turbo C - 1988
+Turbo C/C++ - 1990
+Borland C/C++ - 1991
+Microsoft C/C+ - 1992
+
+C became an ANSI standard in 1988
+C++ standardization began in early 90s and the first version was released in 1998
+           - C++ can be implemented by Multiple Vendors
+           - Metaware High C/C++ ( AutoCAD/3DS Max )
+           -  Digital Mars C/C++ compiler ( Zortech C++ - By Walter Bright )
+                             - D Programming Language ( Another successor of C++ )
+           - Open Watcom C/C++ ( http://www.openwatcom.org/)
+      
+
+Three dominant compilers are 
+            - Microsoft Visual C/C++ ( Proprietory Compiler confirming to ANSI C++ 20 )
+            - GNU Compiler Collection ( by FSF , which confirms to ANSI C++ 20/23)
+            - CLANG Compiler ( based on LLVM project which confirms to ANSI C++ 17/20)
+            - Vikram Adve ( Professor) and his student Chris Latner started LLVM in 2002
+            - Modern Compiler Implementation in ML/JAVA/C book by Andrew Appel
+            - LLVM project page ( https://llvm.org/ )
+            - The URL of  "Vikram Adve page" - https://vikram.cs.illinois.edu/
+
+ Andrei Alexandrescu ( https://en.wikipedia.org/wiki/Andrei_Alexandrescu) book on 
+C++ - Modern C++ design ( https://en.wikipedia.org/wiki/Modern_C%2B%2B_Design)
+              - Most of his ideas has been absorbed into Modern C++ ( C++ 11/14/17/20/23)
+             
+Ownership semantics is supported in C++
+               - Garbage Collection happens during the Rutime
+               - Modern Compilers can do Static Analysis and track Ownership 
+                           - Automatic Reference Counting in CLANG compiler for Objective C/C++ 
+                           - RUST employs sophisticated compiler technology based on Static Analysis to detect Garbage
+                             and place calls to clear them judiciously
+                           - In C++ , one needs to use "Move Semantics" (manually) - Better Fine grained control
+In C++, the programmer has to explicit memory management
+                   - In C#/Java/Python/JS etc, things are garbage collected
+                   - GO is a garbage collected language which generates Native Code
+                            - RUST uses Ownership semantics to achieve managed memory by static analysis
+                   - C++ 11 started supporting "Move Semantics" ( Programmer can decide ownership rules)
+                            - Use of Smart Pointer makes it less painful
+
+Three Principles of C++
+            = Zero Cost Abstraction - You do not pay for what you have not used!
+             = Expressivity ( a User Defined Type (UDT) should be expressive like Builtin Type )
+                                 - Int vs SmartInt , Decimal vs Bigdecimal )
+                                 - Operator Overloading is supported to Achieve this 
+             = Substituitability
+                                 - A UDT can be substituted where a bultin is expected in the case of Templates
+                                 - Templates are called Generics in other languages ( Scala/Java/C# )
+
+C++ will become error prone, if we use a Garbage Collector
+   - Read about https://en.wikipedia.org/wiki/Boehm_garbage_collector
+   - Aliasing analysis will be difficult
+
+The Hack Project
+       - https://hhvm.com/  ( Andrei Alexanderescu and his team @ Facebook Research )
+
+The preliminary programs only process " ASCII character sets " (Extended eight bit ASCII )
+                 - ANSI character Set ( DBCS - Double Byte Character Set )
+                 - Unicode - UTF8 (XML/JSON), UTF16, UTF32, UCS16 
+                 - Multibyte Character Set 
+
+How to write International Software in C/C++
+               - https://www.codeproject.com/Articles/76252/What-are-TCHAR-WCHAR-LPSTR-LPWSTR-LPCTSTR-etc
+The GNU project on internationalization
+	- https://www.gnu.org/software/gettext/
+
+Qualitative Computing 
+                 - i18N - Internationalization (Write Code Globally )
+                 - L10N - Localization ( Localize the Global code through configuration and database )
+                 - Security/Usability, W3C accesibility 
+                 - Programming Cross cutting concern globally
+
+
+
+
+        
+          
+ 
+
+
+         
+
