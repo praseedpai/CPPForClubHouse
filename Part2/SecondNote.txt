@@ -1,0 +1,58 @@
+The Key urls
+    - https://github.com/praseedpai/COMNativeCode2009
+
+The Tutorial on creating Dynamic Link Library (DLL) under Windows
+
+         - https://github.com/praseedpai/COMNativeCode2009/blob/master/PolyglotProgramming.pdf
+=================================
+#include <windows.h>
+    - This assumes that you have installed Visual C/C++ (Visual Studio ) or 
+      GCC under Windows (MINGW32 or MINGW64)
+
+    MINGW32 - Minimalist Gnu for Windows
+
+=======================================
+
+Calling Convention 
+             pascal  - Pascal Calling Convention
+	- Arguments are pushed from Left to Right and Caller POPs the Stack
+                  - used in Windows 16 bit
+                  
+           - _cdecl - class C Calling Convention
+                  - Arguments are pushed from Right to Left and Callee POPs the stack
+                  - used by C Compilers by Default
+             _stdcall - Standard Calling Convention             
+                  - Pushes like C , But, POPs like PASCAL
+                  - Modern Windows Programs uses _stdcall
+
+==================================================
+
+
+Static Linking in Visual C/C++
+
+Candidate files are  "first.cpp & MathRoutine.cpp"
+
+cl  /c first.cpp   // will produce first.obj in windows and first.o in Linux
+cl  /c MathRoutine.cpp  // will produce MathRoutine.obj
+
+link /OUT:test.exe first.obj MathRoutine.obj  // will produce test.exe
+==============
+cl first.cpp MathRoutine.cpp MathRoutine2.cpp // will produce first.exe
+
+==============================================
+We will move to the Concept of a Library
+
+  cl /c MathRoutine.cpp
+  cl /c MathRoutine2.cpp
+  LIB /out:MathSub.lib MathRoutine.obj MathRoutine2.obj
+  cl /c first.cpp
+  LINK /out:test.exe first.obj MathSub.lib   // will produce MathSub.lib
+
+ ====================================================
+
+How to Create DLL ?  ( They are called Shared Object (.so ) in GNU Linux )
+
+       
+
+
+ 
