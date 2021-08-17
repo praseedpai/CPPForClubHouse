@@ -1,0 +1,80 @@
+Shared Objects in POSIX systems
+==========================
+POSIX - Portable Operating Systems Interface eXtensions
+       - IEEE standard (1988 )
+       - A Standard Operating Systems Interface Specifications
+ABI - Application Binary Interface 
+       - Windows , POSIX ABIs
+       - 32 bit ABI for Windows and GNU Linux was more or less similar
+       - 64 bit it diverges
+
+WINE - Wine Is Not an Emulator 
+           - Has Complications due divergence in the ABI
+
+Etherium has got it's own ABI
+          - Solidity and one more language can be used to create Smart Contract
+         
+----------------------------
+
+extern "C" int Add(int a, int b );
+
+          - Above stuff is called Function Prototype
+          - Meta Linguistic Abstractions ( MLA )
+                    - SICP chapter 4
+          - a & b are called Formal Parameters
+          - Add(x,y)  => Actual Parameters
+          - x => a , y => b - Binding 
+==============================
+Suppose there is function which takes two formal parameters viz a, b 
+and actual parameters at the call site is 2*4, temp
+
+extern "C" Foo( int a, int b );
+
+Foo(2*4, temp ); //Call site 
+
+=======================================
+Foo & Bar are called "Meta Syntatic Variables" 
+       - BarCamp => 
+       - FOO camp => Friend's Of Orielly (Tim Orielly )
+       - FOO became a PR scandal ( being an Invite only conference)
+       - IF there is a  FOO camp, why there can't be a BAR camp?
+       - FOO is a conference, BAR is a unconfernce
+       - FOO is invite only , BAR is open
+       - FOO has Agenda , BAR has got Presentation list (by participants )
+Apache Cordova  (PhoneGAP ) was developed in a BarCamp
+
+Ivin Gancius took a session on "Startups and Registration formalities"
+Kenney Jacob 
+==============================================
+g++ -c MathLib.cpp // produced MathLib.o
+g++ -c first.cpp // produced first.o
+
+g++ -o temp.exe first.o MathLib.o // produces temp.exe as output
+
+g++ first.o MathLib.o   => produces a.out ( Default Filename )
+
+====================================================
+What is the name of the Librarian in Windows?
+         - LIB.exe
+         - ar  ( archive file )
+
+LD => Configurable Linker from GCC project
+
+We can archive MathLib.o and MathLib2.o into a single library file
+
+Consult the PDF file to learn about what we are discussing here @
+https://github.com/praseedpai/COMNativeCode2009/blob/master/GCCCPP.pdf
+
+=============================================================
+Dynamic Loading of DLLs
+         - LoadLibrary => dlopen
+         - GetProcAddress => dlsym
+         - FreeLibrary => dlclose
+
+set BIN = //compiler executable path
+set LIB = /a/test;b/test2
+set INCLUDE = // include path here
+
+
+
+
