@@ -1,0 +1,39 @@
+How to Compile/Link/Load X-Platform Programming?
+
+Java vs C/C++ - Cross Platform Programming
+             - Binary Level Portability in Java , Python 
+             - Source Level Portability in C/C++
+
+Examples
+           - Chrome Browser , Google v8 Engine , Mozila FireFox , JVMs
+           - Graal VM is written in Java though (JIT part of it )
+
+Reboot magazine article link @
+https://github.com/praseedpai/CUSATRebootArticle/blob/master/article.pdf
+
+The article can be accessed from the following URL @ ( Page 33 )
+https://issuu.com/renjithforever/docs/reboot
+
+//----- Prototype of the qsort function
+void qsort (void* base, size_t num, size_t size, int (*compare)(const void*,const void*));
+
+Hygenic Macro => 
+https://en.wikipedia.org/wiki/Hygienic_macro
+
+
+
+qsort(arr, argc-1, sizeof(double), comparitor );
+
+ int cmp_double( const void *a , const void *b )
+{
+          double *pa = (double *) a;
+          double *pb = (double *) b;
+          //----- signum function 
+          return ( (*pa > *pb) ? 1 : (*pa < *pb )? -1 : 0 );
+
+}
+
+//---- For learning about qsort in it's various avatar, go to the following site
+https://icarus.cs.weber.edu/~dab/cs1410/textbook/8.Strings/qsort.html
+
+
