@@ -1,0 +1,136 @@
+double *arr = (double *) malloc(num*sizeof(double)); // returns void * , we need to cast it
+
+if ( arr == 0 ) { fprintf(stdout, "Memory Allocation failure\n"); return -1; }
+
+ // ----- parr stores the pointer to newly allocated buffer (arr)
+double *parr = arr;
+//------------ point to the start of the actual argument
+char **nums = &argv[1];  // & is the address of operator
+
+  //----- move through the command line arguments
+while (num--)  { *parr++ = atof(*nums); nums++; }   // atof => ascii to float 
+
+======================================
+Welcome to Cross Platform Programming 
+            - X-Platform Programming 
+Windows / Linux / MAC OS X Programming 
+
+Qt => Cute   // A Cross Platform Toolkit for C/C++ GUI Programming 
+
+PyQt => Python Binding for Qt C++ Library
+
+Qt is a Cross Platform Library 
+          - https://www.qt.io/
+
+How it runs on Windows, Linux, MAC OS X and Embedded System?
+           - Windows Windowing System & X-Windows Windowing System
+           -  X typically run on GNU Linux ( aka POSIX ) system
+           - Source code Portability vs Binary code Portability
+                     - x86 (intel architecture), x86-64 (Amd...Intel also follows it),
+                        ARM family of processors , POWER PC , Mone (ARM equivalent),
+                        BroadCom GPU ,  ATMEL AVR 
+                      - Since C targets many Micro Processors , it can assure only Source code portability
+                      - Microsoft CLR (Common Language Runtime) vs JVM (Java world)
+                             - Any language can target these specifications 
+                             - Java Runtime or CLR runtime interprets or JIT the code into MuP
+                      - Python/Ruby is targetting their own Byte code format
+                                 - Their runtime interprets it
+                      - Any library which has got Native code component in it won't work on multiple processors
+                      - Jython/JRuby on JVM vs Iron Python/Iron Ruby on CLR 
+                      - Apache BCEL / Obj asm  vs Microsoft Reflection.Emit / Mono CECIL
+                      - Jasmine Assembler vs Microsoft ILASM
+                      - JIT strategies are different between these VMS
+                                 - Java HotSpot Technology .... Microsoft JITs everything
+
+=============================================
+https://github.com/praseedpai/CUSATRebootArticle
+
+How to Compile and Link the Program under Windows?
+=========================================
+cl  /c /D_WINDOWS QSort.cpp   // Declare a Pre-Processor flag at the compile time
+link /out:QSort.dll /DLL /DEF:Qsort.def QSort.obj  // generates Qsort.dll
+cl /D_WINDOWS caller.cpp // Produces caller.exe
+caller 1 3 4 -5 6   // invokes caller.exe
+=================================================
+GNU Linux - Gnu is Not Unix ( Free Software Foundation - CopyLeft License )
+GPL vs OSI compilant licenses
+============================
+
+// under Windows @ the Visual C/C++ command prompt
+// -----------------------------------------------
+// cl /D_WINDOWS /c Qsort.cpp
+// link /DLL /out:QSORT.dll /DEF:QSort.def Qsort.obj 
+//
+// under GNU Linux @ the Terminal 
+// ------------------------------
+// g++ -c  -fPIC  -o Qsort.o Qsort.cpp
+// g++ -shared -o libQSORT.so Qsort.o
+//
+// under MAC OS X @ the Terminal 
+// ------------------------------
+// g++ -c  -fPIC -o Qsort.o Qsort.cpp
+// g++ -dynamiclib -o libQSORT.so Qsort.o
+//
+//=======================================
+How to Compile and Link the Program under GNU Linux?
+
+g++ -c  -fPIC  -o Qsort.o Qsort.cpp
+g++ -shared -o libQSORT.so Qsort.o
+g++ Caller.cpp -ldl
+
+./a.out -2 4 5 -1 3
+-2
+-1
+3
+4
+5
+
+=======================================
+
+LLVM Project - Vikram Adve and Chris Lattner started LLVM Project
+BSD License vs MIT License vs GPL/LGPL Licences
+Fourth Freedom of FSF is made mandatory by BSD and MIT
+FSF was started in 1984
+Hacker culture started long ago in MIT and UC Berkley
+Clang ( BSD ) vs GCC ( GPL )
+Clang is a compiler based on LLVM 
+Clang emulated GCC flag by flag
+        - then it should accept -shared flag .... homework!
+
+=========================================
+
+MAC OS X   =>  thread_posix.cpp -> int MakeThread( int cpucount )
+
+{
+
+           // POSIX specific routine
+
+ }
+Windows => thread_win.cpp - int MakeThread( int cpucount )
+
+{
+
+           // Windows specific routine
+
+ }
+
+//---- thread.h
+int MakeThread(int cpucount ); //cross platform code 
+
+// POSIX make file
+g++ -D_POSIX xxx.cpp posix_thread.cpp
+
+// Windows make 
+cl D_WINDOWS xxx.cpp windows_thread.cpp
+
+
+BOOST is a header only library ( well, almost!)
+
+C++ Templates libraries are mostly header only
+
+1997 - Roman Knoll - Visionics inc.
+          - "stupid pointers and arrows"
+          - "why should u complicate things, when easier ways are available"
+=====================================================
+ceteris paribus ( other things being equal ) , demand shows an inverse relationship with Price
+               -
